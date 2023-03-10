@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.101.0">
+  <title>home</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#712cf9">
+
+
+
+  <!-- <link href="homestyle.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+  +
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#712cf9">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .checked {
+      color: orange;
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    a:link {
+      color: blue;
+      /* background-color: transparent; */
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: black;
+      /* background-color: transparent; */
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: red;
+      /* background-color: transparent; */
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: yellow;
+      /* background-color: transparent; */
+      text-decoration: underline;
+    }
+
+    .bg-image {
+      /* The image used */
+
+      /* Add the blur effect */
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .fa {
+      /* padding: 0px; */
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+
+    .button {
+      background-color: #ddd;
+      border: none;
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 16px;
+    }
+
+    .socialicons {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+
+    .zoom {
+      transition: transform .2s;
+    }
+
+    .zoom:hover {
+      transform: scale(1.2);
+      /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <header>
+    <div class="navbar shadow-sm" style="background-color: #051D40;">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="logo.jpeg" width="35" height="35" fill="none" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"
+            style="border-radius: 50%;">
+          <strong style="color: white;">Hostel World</strong>
+        </a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> -->
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="background-color:#051D40; color: white;">
+    <section class="text-center container" style="margin-top:20px ;">
+      <div class="row py-lg-3">
+        <div class=" col-md-8 mx-auto">
+          <h1 class="fw-light">Hostel World - Live the Best, Study Well !</h1>
+          <!-- <p class="lead text-muted">Live the best, study well !!!</p> -->
+          <p>
+
+            <!-- <a href="loginpage(sgp-1).html" class="btn btn-primary my-2">Sign Up</a> -->
+          <div class="zoom">
+            <button type="button" class="btn btn-light" style="margin-right: 10px;"><a
+                href="./Loginpage.html">Login</a></button>
+            <!-- <a href="loginpage(sgp-1).html" class="btn btn-secondary my-2">Login</a> -->
+            <button type="button" class="btn btn-light"><a href="./signuppage(sgp-1).html">Sign Up</a></button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="bg-image"></div>
+      <div class="container">
+
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="zoom">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="Prince.jpeg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+
+
+                  <div class="card-body" style="color: #051D40;">
+                    <h4>
+                      Prince Hostel
+                    </h4>
+                    <p class="card-text">
+                    <h4>Ratings:<span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </h4>
+                    </p>
+                    <button class="button"><a
+                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14734.092493013595!2d72.8223489!3d22.5969324!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd7a283b447c20f64!2sPrince%20hostel!5e0!3m2!1sen!2sin!4v1665063855425!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" target="iframe_a">Location</button></a>
+                    <button class="button"><a href="/contactform.html" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        target="iframe_a">Get Quote</button></a>
+                    <!-- <button class="button">Location</button> -->
+                    <!-- <a href="">Location</a> -->
+
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      </div>
+                      <!-- <small class="text-muted">9 mins</small> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="zoom">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="nisarg.jpeg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+
+                  <div class="card-body" style="color: #051D40;">
+                    <h4>
+                      Nisarg Hostel
+                    </h4>
+                    <p class="card-text">
+                    <h4>Ratings:<span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </h4>
+                    </p>
+                    <button class="button"><a
+                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14733.929344153436!2d72.8235758!3d22.5984567!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa442dd4a1df70b6!2sNisarg%20Hostel!5e0!3m2!1sen!2sin!4v1665081359543!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" target="iframe_a">Location</button></a>
+                    <button class="button"><a href="/contactform.html" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        target="iframe_a">Get Quote</button></a>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      </div>
+                      <!-- <small class="text-muted">9 mins</small> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="zoom">
+            <div class="col">
+              <div class="card shadow-sm">
+                <a href="/Royalcare.html"><img src="rc.JPG" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                    focusable="false"></a>
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+
+                  <div class="card-body" style="color: #051D40;">
+                    <h4>
+                      <a href="/Royalcare.html">Royal Care Hostel</a>
+                    </h4>
+                    <p class="card-text">
+                    <h4>Ratings:<span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </h4>
+                    </p>
+                    <button class="button"><a
+                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14734.022827168015!2d72.8241374!3d22.5975833!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa7ccb7b99f760e6e!2sRoyal%20Care%20Boys%20Hostel!5e0!3m2!1sen!2sin!4v1665081468658!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" target="iframe_a">Location</button></a>
+                    <button class="button"><a href="/contactform.html" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        target="iframe_a">Get Quote</button></a>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      </div>
+                      <!-- <small class="text-muted">9 mins</small> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="zoom">
+            <div class="col">
+              <div class="card shadow-sm">
+                <a href="/sahajanand.html"> <img src="sh.jfif" width="100%" height="225"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                    preserveAspectRatio="xMidYMid slice" focusable="false"></a>
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+
+                  <div class="card-body" style="color: #051D40;">
+                    <h4>
+                      <a href="/sahajanand.html">Sahajanand Hostel</a>
+                    </h4>
+                    <p class="card-text">
+                    <h4>Ratings:<span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </h4>
+                    </p>
+                    <button class="button"><a
+                        href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.701699900051!2d72.79839781479227!3d22.5902574851738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e572db0000001%3A0xf03b17d5be552a4!2sSahajanand%20Hostel!5e0!3m2!1sen!2sin!4v1665081556569!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" target="iframe_a">Location</button></a>
+                    <button class="button"><a href="/contactform.html" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        target="iframe_a">Get Quote</button></a>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      </div>
+                      <!-- <small class="text-muted">9 mins</small> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="zoom">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="shree.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+
+                  <div class="card-body" style="color: #051D40;">
+                    <h4>
+                      Shreedeep Hostel
+                    </h4>
+                    <p class="card-text">
+                    <h4>Ratings:<span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </h4>
+                    </p>
+                    <button class="button"><a
+                        href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.2660936356483!2d72.8172403147927!3d22.606536485165375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e50b89b4c8ebb%3A0xcc0ab031868b1a0f!2sShreedeep%20Boys%20Hostel%2C%20CHANGA!5e0!3m2!1sen!2sin!4v1665081643239!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" target="iframe_a">Location</button></a>
+                    <button class="button"><a href="/contactform.html" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        target="iframe_a">Get Quote</button></a>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      </div>
+                      <!-- <small class="text-muted">9 mins</small> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="zoom">
+            <div class="col">
+              <div class="card shadow-sm">
+                <a href="/darshan.html"><img src="darshan.jfif" width="100%" height="225"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                    preserveAspectRatio="xMidYMid slice" focusable="false"></a>
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+
+                  <div class="card-body" style="color: #051D40;">
+                    <h4>
+                      <a href="/darshan.html">Darshan Hostel</a>
+                    </h4>
+                    <p class="card-text">
+                    <h4>Ratings:<span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </h4>
+                    </p>
+                    <button class="button"><a
+                        href="https://www.google.com/maps/dir/22.5941222,72.8160973/HRR2%2B464+Darshan+Hostel,+petlad+road,near+SBI+bank,changa,DI,+Changa,+Gujarat/@22.5934059,72.7988802,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x395e572db0000001:0x99a9a39251580927!2m2!1d72.8006314!2d22.5902632"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" target="iframe_a">Location</button></a>
+                    <button class="button"><a href="/contactform.html" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        target="iframe_a">Get Quote</button></a>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      </div>
+                      <!-- <small class="text-muted">9 mins</small> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="zoom">
+            <div class="col">
+              <div class="card shadow-sm">
+                <a href="/Ashirvad.html"><img src="ash.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                    focusable="false"></a>
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+
+                  <div class="card-body" style="color: #051D40;">
+                    <h4>
+                      <a href="/Ashirvad.html">Ashirvad Hostel</a>
+                    </h4>
+                    <p class="card-text">
+                    <h4>Ratings:<span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </h4>
+                    </p>
+                    <button class="button"><a
+                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14734.253330477168!2d72.8212393!3d22.5954296!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa498a5d8bc403f79!2sAashirvad%20Hostel!5e0!3m2!1sen!2sin!4v1665081912842!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" target="iframe_a">Location</button></a>
+                    <button class="button"><a href="/contactform.html" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        target="iframe_a">Get Quote</button></a>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      </div>
+                      <!-- <small class="text-muted">9 mins</small> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="zoom">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="ohm.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+
+                  <div class="card-body" style="color: #051D40;">
+                    <h4>
+                      Ohm Hostel
+                    </h4>
+                    <p class="card-text">
+                    <h4>Ratings:<span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </h4>
+                    </p>
+                    <button class="button">
+                    <a href="https://www.google.com/maps/place/Ohm+Hostel/@22.6007932,72.8241417,17z/data=!3m1!4b1!4m5!3m4!1s0x395e50c221b7122d:0xc4c57639ac4d7e6d!8m2!3d22.6007932!4d72.8263304"
+                      width="600" height="450" style="border:0;">Location</a>
+
+                    </button>
+
+
+                    <button class="button"><a href="/contactform.html" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        target="iframe_a">Get Quote</button></a>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      </div>
+                      <!-- <small class="text-muted">9 mins</small> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="zoom">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="my.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">
+
+                  <div class="card-body" style="color: #051D40;">
+                    <h4>
+                      Staycon hostel
+                    </h4>
+                    <p class="card-text">
+                    <h4>Ratings:<span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </h4>
+                    </p>
+                    <button class="button"><a
+                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14734.092493013595!2d72.8223489!3d22.5969324!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd7a283b447c20f64!2sPrince%20hostel!5e0!3m2!1sen!2sin!4v1665063855425!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" target="iframe_a">Location</button></a>
+                    <button class="button"><a href="/contactform.html" width="600" height="450" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        target="iframe_a">Get Quote</button></a>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
+                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      </div>
+                      <!-- <small class="text-muted">9 mins</small> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- <ksgfvbdkmlctfgbhjnkfgbhjdfgbhjk? -->
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap" />
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-muted">&copy; 2022 HostelWorld</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex ">
+        <!-- <li class="ms-3"><a class="text-muted" href="#"><img src="logo.jpeg"width="24" height="24"></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><img src="logo.jpeg"width="24" height="24"></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><img src="Blue Bunk Street City Hostel Logo.png"width="24" height="24"></a></li> -->
+        <div class="zoom">
+          <a href="https://www.facebook.com/sujal.joisar.9/" target="_blank" class="fa fa-facebook"
+            style="margin:10px; padding: 10px; color: #ddd;"></a>
+          <a href="https://www.linkedin.com/in/sujal-joisar-82337722a/" target="_blank" class="fa fa-linkedin"
+            style="margin:10px; padding: 10px; color: #ddd;"></a>
+          <a href="https://www.youtube.com/channel/UC4YDXleqaM0VSkDnG6FM8sg/featured" target="_blank"
+            class="fa fa-youtube" style="margin:10px; padding: 10px; color: #ddd;"></a>
+          <a href="https://www.instagram.com/sujaljoisar007/" target="_blank" class="fa fa-instagram"
+            style="margin:10px; padding: 10px; color: #ddd;"></a>
+        </div>
+      </ul>
+    </footer>
+  </div>
+  </div>
+  </footer>
+  <!--<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <div class="col-md-4 d-flex align-items-center">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+    <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+  </div>
+
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+    <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+    <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+  </ul>
+</footer>-->
+
+
+
+  <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

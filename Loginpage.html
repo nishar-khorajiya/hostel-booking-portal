@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.101.0">
+  <title>Login In</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#712cf9">
+
+
+
+  <style>
+    * {box-sizing: border-box;}
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .container {
+      background-color: #e7830a;
+      padding: 20px;
+    }
+
+    /* The message box is shown when the user clicks on the password field */
+    #message {
+      display: none;
+      background: #f1f1f1;
+      color: #000;
+      position: relative;
+      padding: 20px;
+      margin-top: 10px;
+    }
+
+    #message p {
+      padding: 10px 35px;
+      font-size: 18px;
+    }
+
+    /* Add a green text color and a checkmark when the requirements are right */
+    .valid {
+      color: green;
+    }
+
+    .valid:before {
+      position: relative;
+      left: -35px;
+      content: "&#10004;";
+    }
+
+    /* Add a red text color and an "x" icon when the requirements are wrong */
+    .invalid {
+      color: red;
+    }
+
+    .invalid:before {
+      position: relative;
+      left: -35px;
+      content: "&#10006;";
+    }
+
+    a:visited {
+      color: rgb(251, 18, 18);
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    .fa-eye{
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  cursor: pointer;
+  color: gray;
+}
+.icon {
+  padding: 10px;
+  text-align: left;
+}
+
+.form-floating i{
+  position: absolute;
+}
+/* .form-floating{
+  width:100%;
+  margin-bottom: px;
+}  */
+ /* .form-control {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  right: 100%;
+} */
+
+/* .form-floating{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  
+}
+form .form{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}  */
+form .form-floating{
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+  }
+  .form-floating {
+    /* height: 100%;
+    width: 100%; */
+    /* outline: none; */
+    /* border: 1px solid lightgrey; */
+    /* border-radius: 5px; */
+    /* padding-left: 45px; */
+    font-size: 17px;
+    transition: all 0.3s ease;
+  }
+  .form-floating .icon{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-60%);
+    color: grey;
+  }
+  form .option_div{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .option_div .check_box{
+    display: flex;
+    align-items: center;
+  }
+  .option_div span{
+    margin-left: 5px;
+    font-size: 16px;
+    color: white;
+  }
+  form{
+    text-align: center;
+  }
+  
+  </style>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="stylesa.css" rel="stylesheet">
+
+</head>
+
+<body class="text-center" style="background-color: #051D40;">
+
+
+
+  <main class="form-signin w-100 m-auto">
+    <form>
+      <!-- <img src="Tablet login.gif"  height="300px" width="300px"> -->
+      <img class="mb-4" src="Blue Bunk Street City Hostel Logo.png" alt="" width="100px" height="100px" style="border-radius: 50%;">
+      <h1 class="h3 mb-3 fw-normal" style="color: white;">Please Login</h1>
+      <div class="form-floating">
+        <!-- <i class="fa fa-envelope icon"></i> -->
+       
+        <input type="email" class="form-control" id="email" placeholder ="Email" style="margin: 0px 0px 10px;border-radius: 5px; padding-left:30px;" required > 
+          <div class="icon" >
+            <i class="fas fa-user" ></i>
+          </div>
+          <label for="email" style="padding-left: 35px;" >Email</label>
+          <!-- -->
+      </div>
+
+      <div class="form-floating">
+        <!-- <i class="fa fa-key icon"></i> -->
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  autocomplete="current-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" style="padding-left:30px;" required>
+        <div class="icon">
+          <i class="fas fa-lock"></i>
+        </div>
+        <!-- <i class="fa-solid fa-eye" id="eye"></i> -->
+
+        <!-- <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer; color: #f1f1f1;"></i> -->
+          <label for="floatingPassword" style="padding-left: 35px;">Password</label>
+          <!--  -->
+    <div class="option_div">
+      <div class="check_box">
+        <input type="checkbox">
+        <span>Remember me</span>
+      </div><br>
+      <div class="forget_div">
+        <a href="#">Forgot password?</a>
+      </div>
+    </div><br>
+        <input type="submit" value="Login" class="btn btn-light" style="margin-right: 10px;"></button>&nbsp;
+        <button type="button" class="btn btn-light"><a href="./signuppage(sgp-1).html" style="color:black; text-decoration: none;">Sign Up</a></button>
+        <p class="mt-5 mb-3 text-muted">&copy; Hostel World 2022</p>
+      </div>
+    </form>
+    <div id="message">
+      <h3>Password must contain the following:</h3>
+      <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+      <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+      <p id="number" class="invalid">A <b>number</b></p>
+      <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
+    <script>
+
+const passwordField = document.querySelector("#floatingPassword");
+const eyeIcon= document.querySelector("#eye");
+eye.addEventListener("click", function(){
+  this.classList.toggle("fa-eye-slash");
+  const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+  passwordField.setAttribute("type", type);
+});
+
+      var myInput = document.getElementById("psw");
+      var letter = document.getElementById("letter");
+      var capital = document.getElementById("capital");
+      var number = document.getElementById("number");
+      var length = document.getElementById("length");
+
+      // When the user clicks on the password field, show the message box
+      myInput.onfocus = function () {
+        document.getElementById("message").style.display = "block";
+      }
+
+      // When the user clicks outside of the password field, hide the message box
+      myInput.onblur = function () {
+        document.getElementById("message").style.display = "none";
+      }
+
+      // When the user starts to type something inside the password field
+      myInput.onkeyup = function () {
+        // Validate lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if (myInput.value.match(lowerCaseLetters)) {
+          letter.classList.remove("invalid");
+          letter.classList.add("valid");
+        } else {
+          letter.classList.remove("valid");
+          letter.classList.add("invalid");
+        }
+
+        // Validate capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput.value.match(upperCaseLetters)) {
+          capital.classList.remove("invalid");
+          capital.classList.add("valid");
+        } else {
+          capital.classList.remove("valid");
+          capital.classList.add("invalid");
+        }
+
+        // Validate numbers
+        var numbers = /[0-9]/g;
+        if (myInput.value.match(numbers)) {
+          number.classList.remove("invalid");
+          number.classList.add("valid");
+        } else {
+          number.classList.remove("valid");
+          number.classList.add("invalid");
+        }
+
+        // Validate length
+        if (myInput.value.length >= 8) {
+          length.classList.remove("invalid");
+          length.classList.add("valid");
+        } else {
+          length.classList.remove("valid");
+          length.classList.add("invalid");
+        }
+      }
+      
+      var state=false;
+      function toggle(){
+        if(state){
+          document.getElementById("password").setAttribute("type","password");
+          document.getElementById("eye").style.color='#7a797e';
+          state=false;
+        }
+        else{
+          document.getElementaryById("password").setAttribute("type","text");
+          document.getElementById("eye").style.color='#5887ef';
+          state=true;
+        }
+      }
+     
+//   const togglePassword = document.querySelector('#togglePassword');
+//   const password = document.querySelector('#floatingPassword');
+
+//   togglePassword.addEventListener('click', function (e) {
+//     // toggle the type attribute
+//     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+//     password.setAttribute('type', type);
+//     // toggle the eye slash icon
+//     this.classList.toggle('fa-eye-slash');
+// });
+    </script>
+  </main>
+
+
+</body>
+
+</html>
